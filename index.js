@@ -4,6 +4,9 @@
 
 // Görev 1a, 1b ve 1c puanlamaya dahil değildir
 
+console.clear();
+console.log("hersey yolunda");
+
 /*
 Bu görevleri yaparken, yazdığınız kod'un doğru çıktı verdiğini kontrol etmek için console.log'u kullanmanızı öneririz.
 Bunu sağlamak için cevabı direk console'a loglayın veya çağırdığınız fonksiyondan dönen değeri console'a loglayın.  
@@ -20,6 +23,15 @@ Aşağıdakileri yapın:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+let surucuYasi = 25;
+
+if (surucuYasi>18) {
+console.log(true);
+} 
+else {
+console.log(false);
+}
+
 
 
 /*
@@ -34,7 +46,19 @@ Aşağıdakileri yapınız:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+console.clear();
 
+
+
+let birinciDeger = 212;
+let ikinciDegeri = 214;
+
+if (birinciDeger === ikinciDegeri) {
+birinciDeger = 300;
+
+}
+
+console.log (birinciDeger);
 
 
 
@@ -48,6 +72,12 @@ Aşağıdakileri yapın:
 
    İPUCU: Number metoduna bakabilirsin
 */
+
+console.clear();
+
+let text = 1999;
+let sayi = Number(text);
+console.log (text);
 
 
 
@@ -65,7 +95,18 @@ function carpma(/*buraya kodunu yazabilirsin*/){
   /*buraya kodunu yazabilirsin*/
 }
 
+console.clear();
 
+
+function carpma(a,b) {
+
+  let sonuc = a * b;
+
+  return sonuc;
+
+}
+
+//console.log (carpma(5,4));
 
 
 /* Görev 2 : Köpeğin Yaşı */
@@ -80,6 +121,15 @@ Aşağıdakileri yapın:
 function kopeginYasi(/*buraya kodunu yazabilirsin*/){
   /*buraya kodunu yazabilirsin*/
 }
+
+console.clear();
+
+function kopeginYasi(insanYasi)
+{
+ return insanYasi * 7;
+
+}
+ 
 
 
 
@@ -104,11 +154,47 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yapın.
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
 
-function oyun(oyuncu, bilgisayar){
-  /*buraya kodunu yazabilirsin*/
+
+
+function bilgisayaraHamlesi() {
+ 
+  let deger = Math.ceil(Math.random()*3);
+
+
+  if(deger === 1) {
+    return "Taş";
+  } 
+  
+  else if (deger === 2) { 
+    return "Kağıt";
+  } 
+  
+  else  {
+     return "Makas";
 }
 
+return sonuc;
+} 
 
+console.clear();
+
+function oyun( oyuncuHamlesi,bilgisayaraHamlesi){
+
+  let sonuc1 = "Kazandın!";
+  let sonuc2 = "Kaybettin!";
+  let sonuc3 = "Beraberlik";
+
+  if ( (oyuncuHamlesi === "Taş" && bilgisayaraHamlesi === "Makas" ) ||
+     (oyuncuHamlesi === "Makas" && bilgisayaraHamlesi === "Kağıt" ) ||
+     (oyuncuHamlesi === "Kağıt" && bilgisayaraHamlesi === "Taş" ) ) 
+     
+     { return sonuc1;} 
+     else if (oyuncuHamlesi === bilgisayaraHamlesi) {return sonuc3;}
+     else { return sonuc2;}
+
+}
+
+console.log( oyun("kağıt"),bilgisayaraHamlesi());
 
 /* Görev 4 : Metrik Dönüştürücü */
 
@@ -124,6 +210,12 @@ function milDonusturucu(/*buraya kodunu yazabilirsin*/){
   /*buraya kodunu yazabilirsin*/
 }
 
+console.clear();
+
+function milDonusturucu(km){
+  return km*0.621371
+}
+ console.log("10km"+ "=" + milDonusturucu(10)+"mil");
 
 
 //Görev 4b - Santimetreden Feet
@@ -157,6 +249,23 @@ function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
       /*buraya kodunu yazabilirsin*/
 }
 
+console.clear();
+
+function cocukSarkisi(x) {
+
+  return  `${x}  küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok! `
+}
+  
+
+
+
+let y = 11
+
+for(let i=y; i>0; i--) { 
+  console.log(cocukSarkisi(i))
+}
+
+console.log(cocukSarkisi(7));
 
 /* Görev 6 : Not Hesaplayıcı */
 
